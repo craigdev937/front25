@@ -3,6 +3,7 @@ import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { LocationMarker } from "../location/LocationMarker";
 
 export const Header = () => {
     const [inputValue, setInputValue] = React.useState("");
@@ -39,22 +40,22 @@ export const Header = () => {
                         <FontAwesomeIcon icon={faAngleRight} />
                     </button>
                 </form>
-                <section className="data-container">
-                    <aside className="address data-container-items">
-                        <p className="data-title">ip address</p>
+                <section className="info">
+                    <aside className="address info__data">
+                        <p className="info__title">ip address</p>
                         <p className="data">123456</p>
                     </aside>
-                    <aside className="location data-container-items">
-                        <p className="data-title">location</p>
-                        <p className="data">City, region, country</p>
+                    <aside className="location info__data">
+                        <p className="info__title">location</p>
+                        <p className="data">City, Region, Country</p>
                     </aside>
-                    <aside className="timezone data-container-items">
-                        <p className="data-title">timezone</p>
-                        <p className="data">UTC time</p>
+                    <aside className="timezone info__data">
+                        <p className="info__title">timezone</p>
+                        <p className="data">UTC Time</p>
                     </aside>
-                    <aside className="isp data-container-items">
-                        <p className="data-title">isp</p>
-                        <p className="data">location</p>
+                    <aside className="isp info__data">
+                        <p className="info__title">isp</p>
+                        <p className="data">Location</p>
                     </aside>
                 </section>
             </header>
@@ -63,11 +64,7 @@ export const Header = () => {
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                <Marker position={[51.505, -0.09]}>
-                    <Popup>
-                        A pretty CSS3 popup. <br /> Easily customizable.
-                    </Popup>
-                </Marker>
+                <LocationMarker position={{ lat: 51.505, lng: -0.09 }} />
             </MapContainer>
         </React.Fragment>
     );

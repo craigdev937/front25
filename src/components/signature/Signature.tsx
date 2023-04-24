@@ -5,13 +5,13 @@ export const Signature = () => {
     return (
         <React.Fragment>
             <section className="attribution">
-                Challenge by 
+                Challenge by {" "}
                     <a 
                         href="https://www.frontendmentor.io?ref=challenge" 
                         target="_blank"
                         >Frontend Mentor
                     </a>. 
-                Coded by 
+                Coded by {" "}
                     <a 
                         href="https://www.frontendmentor.io/profile/indigomx9"
                         target="_blank"
