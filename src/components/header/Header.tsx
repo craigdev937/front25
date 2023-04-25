@@ -80,7 +80,9 @@ export const Header = () => {
                     ) : null}
                 </section>
             </header>
-            {data ? (
+            {isLoading ? (
+                <h1>Loading...</h1>
+            ) : data ? (
                 <MapContainer 
                     center={[data!.location.lat, data!.location.lng]} 
                     zoom={13} 
@@ -92,7 +94,7 @@ export const Header = () => {
                     />
                     <LocationMarker 
                         position={{ 
-                            lat: data!.location.lat, 
+                            lat: data.location.lat, 
                             lng: data!.location.lng
                         }} 
                     />
