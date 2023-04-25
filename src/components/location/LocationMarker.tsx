@@ -1,10 +1,11 @@
 import React from "react";
 import { Marker, useMap } from "react-leaflet";
+import { IData } from "../../models/Interfaces";
 
 type POS = {
     position: {
         lat: number,
-        lng: number,
+        lng: number
     }
 };
 
@@ -18,11 +19,6 @@ export const LocationMarker = ({position}: POS) => {
     return position === null 
         ? null 
         : <Marker position={position}></Marker>
-
-    return (
-        <React.Fragment>
-            
-        </React.Fragment>
-    );
+    
 };
 

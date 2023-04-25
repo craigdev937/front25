@@ -109,6 +109,10 @@
     letter-spacing: normal;
 }
 
+.hide {
+    display: none;
+}
+
 @media only screen and (max-width: 1000px) {
     .header__input::placeholder {
         font-size: 0.5rem;
