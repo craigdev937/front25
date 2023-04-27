@@ -38,7 +38,7 @@ export const Header = () => {
                     <input 
                         className="header__input"
                         type="text" 
-                        placeholder="Search for IP Address"
+                        placeholder="Search for any IP Address or Domain"
                         value={inputValue}
                         onChange={handleChange}
                     />
